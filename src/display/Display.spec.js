@@ -21,11 +21,10 @@ describe('Display', () => {
 
     it("displays 'Closed' if the `closed` prop is `true`", () => {
         let wrapper = rtl.render(<Display closed={true} />);
-        expect(wrapper.queryByText(/closed/i)).toBeInTheDocument();
+        expect(wrapper.queryByText(/closed/i)).toBeInTheDocument()
     })
 
     it("displays 'Open' if otherwise", () => {
-        wrapper.debug()
         expect(wrapper.queryByText(/open/i)).toBeInTheDocument();
     })
 
